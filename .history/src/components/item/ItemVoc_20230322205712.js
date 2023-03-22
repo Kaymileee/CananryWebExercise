@@ -9,6 +9,7 @@ const ItemVoc = ({ name, img }) => {
     msg.text = name;
     window.speechSynthesis.speak(msg);
   };
+  const { speak, voices } = useSpeechSynthesis();
   const [vocTrans, setVocTrans] = useState("");
   const encodedParams = new URLSearchParams();
   encodedParams.append("source_language", "en");

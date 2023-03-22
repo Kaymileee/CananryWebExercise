@@ -4,11 +4,13 @@ import { useSpeechSynthesis } from "react-speech-kit";
 import IconVl from "../icons/IconVl";
 const ItemVoc = ({ name, img }) => {
   const msg = new SpeechSynthesisUtterance();
+  msg.text = "yeah sir";
 
   const handleSpeak = (msg) => {
     msg.text = name;
     window.speechSynthesis.speak(msg);
   };
+  const { speak, voices } = useSpeechSynthesis();
   const [vocTrans, setVocTrans] = useState("");
   const encodedParams = new URLSearchParams();
   encodedParams.append("source_language", "en");
@@ -42,10 +44,7 @@ const ItemVoc = ({ name, img }) => {
         <h5 className="text-xl font-semibold text-blue-300">({vocTrans})</h5>
       </div>
 
-      <IconVl
-        className={"cursor-pointer"}
-        onClick={() => handleSpeak(msg)}
-      ></IconVl>
+      <IconVl className={"cursor-pointer"} onClick={handleSpeak}></IconVl>
     </div>
   );
 };

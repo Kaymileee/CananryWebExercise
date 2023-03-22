@@ -4,11 +4,13 @@ import { useSpeechSynthesis } from "react-speech-kit";
 import IconVl from "../icons/IconVl";
 const ItemVoc = ({ name, img }) => {
   const msg = new SpeechSynthesisUtterance();
+  msg.text = "yeah sir";
 
   const handleSpeak = (msg) => {
     msg.text = name;
     window.speechSynthesis.speak(msg);
   };
+  const { speak, voices } = useSpeechSynthesis();
   const [vocTrans, setVocTrans] = useState("");
   const encodedParams = new URLSearchParams();
   encodedParams.append("source_language", "en");
