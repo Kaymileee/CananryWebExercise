@@ -1,0 +1,50 @@
+import axios from "axios";
+import { setCORS } from "google-translate-api-browser";
+import React, { useEffect } from "react";
+import { useParams, useSearchParams } from "react-router-dom";
+
+const VocDesc = () => {
+  const { vocName } = useParams();
+  // useEffect(() => {
+  //   axios
+  //     .get("https://libretranslate.de/languages", {
+  //       headers: { accept: "application/json" },
+  //     })
+  //     .then((res) => {
+  //       console.log(res);
+  //     });
+  // }, []);
+  const translate = setCORS("http://localhost:3000/Grammar/faceparts");
+  /*
+// or
+import translate, { setCORS } from "google-translate-api-browser";
+setCORS("http://cors-anywhere.herokuapp.com/");
+*/
+  useEffect(() => {
+    translate("eye", { to: "vn" })
+      .then((res) => {
+        // I do not eat six days
+        console.log(res.text);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  }, []);
+  return (
+    <div className="my-10">
+      <h2 className="text-2xl font-semibold">{vocName.toUpperCase()}</h2>
+      <div className="grid h-screen grid-cols-4 bg-white rounded-lg">
+        <div className="w-[400px] ">
+          <img
+            src="https://lingokids.com/wp-content/uploads/2020/11/20172F102F032F102F392F592F229d1721-b20b-47be-b25f-d13acd6b5e022FEye.png"
+            alt=""
+            className="object-cover "
+          />
+          <h5 className="text-xl font-semibold text-blue-700">Eye</h5>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default VocDesc;

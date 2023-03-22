@@ -1,0 +1,14 @@
+<!-- Câu hỏi :
++hình
++câu hỏi(có hoặc ko)
++đáp án
++loại(trắc nghiệm ,từ điền)
++mã đề(0)==100% ,mã đề +1
+
+
+DeKt:
+mã đề
++loại(trắc nghiệm ,từ điền)
+đáp án :["apple","orange"] -->
+
+<!-- mỗi loại sẽ có 3 đề ,Mỗi đề 5 câu  -->

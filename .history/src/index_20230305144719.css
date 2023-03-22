@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(15 23 42/1);
+  color: white;
+  opacity: 0.9;
+}
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.primary {
+  background-image: linear-gradient(
+    to right,
+    rgb(142, 45, 226),
+    rgb(74, 0, 224)
+  );
+}
+.txt-primary {
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.bg-gradient-secondary {
+  background-image: linear-gradient(to right top, #fc6c8f, #ffb86c);
+}
+.txt-primary {
+  background-image: linear-gradient(to right top, #6a5af9, #d66efd);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  /* Below is not needed */
+  background-size: cover;
+}
+
+/* input */
+.text-field {
+  padding: 15px;
+  /* border: 1px solid #6a5af9; */
+  border-radius: 6px;
+  text-align: left;
+}
+
+.text-field label {
+  display: inline-block;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: #6a5af9;
+}
+
+.text-field input {
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  background-color: transparent;
+  color: white;
+  outline: none;
+}

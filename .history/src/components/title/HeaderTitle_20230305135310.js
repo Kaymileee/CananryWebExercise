@@ -1,0 +1,18 @@
+import React from "react";
+
+const HeaderTitle = () => {
+  return (
+    <div className="container">
+      <div className="flex items-center justify-center py-20">
+        <h1 className="mx-auto mb-10 text-3xl font-semibold max-w-[350px] leading-snug text-center text-white lg:leading-relaxed lg:text-4xl">
+          Test-English Take your learning with you! Grammar lessons with
+          exercises and clear explanations, grammar charts, reading and
+          listening tests with transcriptions, writing lessons, instant marking,
+          answer feedback, and much more!
+        </h1>
+      </div>
+    </div>
+  );
+};
+
+export default HeaderTitle;

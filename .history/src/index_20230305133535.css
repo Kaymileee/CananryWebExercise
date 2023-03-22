@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.primary {
+  background-image: linear-gradient(
+    to right,
+    rgb(142, 45, 226),
+    rgb(74, 0, 224)
+  );
+}
+.txt-primary {
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
